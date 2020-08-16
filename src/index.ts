@@ -1,6 +1,6 @@
-const axios = require('axios').default;
+import axios from 'axios';
 
-async function httpsMiddleware(request, response, next) {
+async function httpsMiddleware(request: any, response: any, next: any) {
   const warmUp = request.body.warmUp;
   if (warmUp) {
     const { concurrency, url } = warmUp;
@@ -26,4 +26,4 @@ async function httpsMiddleware(request, response, next) {
   }
 }
 
-module.export = httpsMiddleware;
+export default httpsMiddleware;
