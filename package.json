@@ -1,11 +1,12 @@
 {
   "name": "@foundryapp/blanket",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm version patch --force",
+    "prepublish": "tsc",
     "deploy:npm": "npm publish --access=production"
   },
   "repository": {
@@ -21,5 +22,8 @@
   "homepage": "https://github.com/ValentaTomas/blanket#readme",
   "dependencies": {
     "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7"
   }
 }
