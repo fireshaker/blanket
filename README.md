@@ -24,8 +24,13 @@ Corrrect warm up invocation ends with a 204 status code.
 
 The `warmUp` object and the whole invocation handling will be handled by the curreny `@foundryapp/monitoring-cli` and `@foundryapp/monitoring-backend` packages. The initial function invocation could be handled on a server in the future.
 
+Alternatives to current recursive invocation:
+- add delay to all functions and invoke them in paralell
+- let all functions connect to some endpoint before they can exit - when invoking in parallel add the condition that they can exit the endpoint only when there is x functions connected at the same time.
 
 Inspired by personal need and:
 
 - https://www.jeremydaly.com/lambda-warmer-optimize-aws-lambda-function-cold-starts/
 - https://github.com/jeremydaly/lambda-warmer
+
+
