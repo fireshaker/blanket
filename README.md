@@ -22,7 +22,7 @@ The middleware expects `warmUp` object in the request body that contains `url` o
 
 Corrrect warm up invocation ends with a 204 status code.
 
-The `warmUp` object and the whole invocation handling will be handled by the curreny `@foundryapp/monitoring-cli` and `@foundryapp/monitoring-backend` packages. The initial function invocation could be handled on a server in the future.
+The `warmUp` object and the whole invocation handling will be handled by `@foundryapp/monitoring-cli` and `@foundryapp/monitoring-backend` packages. The initial function invocation could be handled on a server in the future.
 
 Alternatives to current recursive invocation:
 - add delay to all functions and invoke them in paralell
